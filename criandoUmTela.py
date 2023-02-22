@@ -3,10 +3,11 @@ from PySimpleGUI import PySimpleGUI as sg
 sg.theme('Reddit')
 layout = [
     [sg.Text('Usuário'), sg.Input(key='usuario')],
-    [sg.Text('Senha'), sg.Input(key='senha',passowrd_char='*')],
-    [sg.Checkbox('Ssalvar o login?')],
+    [sg.Text('Senha'), sg.Input(key='senha', password_char="*")],
+    [sg.Checkbox('Salvar o login?')],
     [sg.Button('Entrar')]
-]
+],
+
 #Janelas
 janela = sg.Window('Tela de Login',layout)
 #Ler evenos
@@ -16,4 +17,4 @@ while True:
         break
     if eventos == "Entrar":
         if valores ['usuario'] == 'Gildevan' and valores['senha'] == '123456':
-            print('Bem vindo ao PYTHON 👌😍')
+            print(f'Bem vindo ao PYTHON👌😍')
